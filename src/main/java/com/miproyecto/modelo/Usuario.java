@@ -9,6 +9,9 @@ package com.miproyecto.modelo;
  * @author Personal
  */
 public class Usuario {
+
+    public Usuario(String nombre1, String apellido1, String email1, String password1) {
+    }
     
     private String nombre;
     private String apellido;
