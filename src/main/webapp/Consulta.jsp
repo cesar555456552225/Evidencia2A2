@@ -155,7 +155,7 @@
                 
                 <div class="menu">
                     <a href="index.jsp">Volver a inicio</a>
-                    <a href="registro">Registrr usuario</a>
+                    <a href="registro.jsp">Registrr usuario</a>
                 </div>
         </div>
     </body>
