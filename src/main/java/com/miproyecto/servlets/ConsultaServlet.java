@@ -39,18 +39,6 @@ public class ConsultaServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ConsultaServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ConsultaServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -67,7 +55,7 @@ public class ConsultaServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         
-        List<Usuario> listaUsuarios = (List<Usuario>) session.getAttribute("listaUusarios");
+        List<Usuario> listaUsuarios = (List<Usuario>) session.getAttribute("listaUsuarios");
         if (listaUsuarios == null) {
             listaUsuarios = new ArrayList<>();
             session.setAttribute("listaUsuarios",listaUsuarios);

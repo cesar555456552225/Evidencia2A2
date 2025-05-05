@@ -13,6 +13,91 @@
     <meta charset="UTF-8">
     <title>Consulta de Usuarios</title>
 </head>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    h1, h2{
+        color: #333;
+    }
+    .container{
+        max-width: 800px;
+        margin:0;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    .form-group{
+        margin-bottom: 15px;
+    }
+    .form-group label{
+        display:block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .form.group input{
+        width: 70%;
+        padding: 8px;
+        box-sizing: border-box;
+        border:1px solid #ddd;
+        border-radius:4px;
+    }
+    .btn{
+        padding: 8px 15px;
+        background-color: #4caf50;
+        color: white;
+        border:none;
+        borde-radius:4px;
+        cursor:pointer;
+    }
+    .btn:hover{
+        background-color: #45a049;
+    }
+    .menu{
+        margin: 20px 0; 
+    }
+    .menu a{
+        color: #4caf50;
+        text-decoration: none;
+    }
+    menu a:hover {
+        text-decoration: underline;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    table th,td{
+        border: 1px solid #ddd;
+        
+    }
+    th,td{
+        padding: 8px;
+        text-align: left;
+    }
+    th{
+        background-color: #f2f2f2;
+    }
+    th{
+        background-color: #f2f2f2;
+    }
+    .results{
+        margin: 20px;
+        padding: 15px;
+        border:1px solid#ddd;
+        border-radius: 4px;
+    }
+    .not-found{
+        color: #721c24;
+        background-color: #f8d7da;
+        padding: 10px;
+        border-radius: 4px;
+    }
+</style>
 <body>
     <div class="container">
         <h1>Consulta de Usuarios</h1>
