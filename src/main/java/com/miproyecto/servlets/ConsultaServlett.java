@@ -6,7 +6,6 @@ package com.miproyecto.servlets;
 
 import com.miproyecto.modelo.Usuario;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -24,8 +23,7 @@ import java.util.List;
  *
  * @author Personal
  */
-@WebServlet(name ="ConsultaServlet", urlPatterns={"/consulta"})
-public class ConsultaServlet extends HttpServlet {
+public class ConsultaServlett extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,6 +37,18 @@ public class ConsultaServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ConsultaServlett</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ConsultaServlett at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -56,27 +66,28 @@ public class ConsultaServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         List<Usuario> listaUsuarios = (List<Usuario>) session.getAttribute("listaUsuarios");
-        if (listaUsuarios == null) {
+        if (listaUsuarios == null){
             listaUsuarios = new ArrayList<>();
-            session.setAttribute("listaUsuarios",listaUsuarios);
-        }
-        String emailBusqueda = request.getParameter("email");
-        if (emailBusqueda != null && !emailBusqueda.isEmpty()){
-            Usuario usuarioEncontrado = null;
+            session.setAttribute("listaUsuarios", listaUsuarios);
+            String emailBusqueda  = request.getParameter("email");
             
-            for (Usuario usuario : listaUsuarios){
-                if (usuario.getEmail().equals(emailBusqueda)){
-                    usuarioEncontrado = usuario;
-                    break;
+            if (emailBusqueda != null && !emailBusqueda.isEmpty()){
+                Usuario usuarioEncontrado = null;
+                
+                for (Usuario usuario : listaUsuarios){
+                    if (usuario.getEmail().equals("emailBusqueda")){
+                        usuarioEncontrado = usuario;
+                        break;
+                    }
                 }
+                
+                request.setAttribute("usuarioBuscado", usuarioEncontrado);
+                request.setAttribute("busquedaRealizada",true);
             }
-            
-            request.setAttribute("usuarioBuscado", usuarioEncontrado);
-            request.setAttribute("busquedaRealizada",true);
-            
-            request.getRequestDispatcher("/consulta.jsp").forward(request, response);
+            request.getRequestDispatcher("/consulta.jsp").forward(request,response);
         }
     }
+
 
     /**
      * Handles the HTTP <code>POST</code> method.
