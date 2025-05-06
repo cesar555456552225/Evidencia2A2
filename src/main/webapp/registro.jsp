@@ -17,9 +17,10 @@
             margin: 0;
             padding: 20px;
             line-height: 1.6;
+            background-color: #FAF0E6;
         }
         h1{
-            color: #333;
+            color: #1a237e;
         }
         .container{
             max-width: 800px;
@@ -42,14 +43,14 @@
         }
         .btn{
             padding: 10px 15px; 
-            background-color: #4CAF50; 
+            background-color: #1976d2; 
             color: white; 
             border: none; 
             border-radius: 4px; 
             cursor: pointer;
         }
         .btn:hover { 
-            background-color: #45a049; 
+            background-color: #0d47a1; 
         }
         .message { padding: 10px; 
             margin: 20px 0; 
@@ -62,7 +63,7 @@
             margin: 20px 0;
         }
         .menu a{
-            color: #4CAF50
+            color: #1a237e
         }
         .menu a:hover{
             text-decoration: underline;

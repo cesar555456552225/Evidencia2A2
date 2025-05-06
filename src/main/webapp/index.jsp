@@ -11,29 +11,50 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sistema de registro de usuarios</title>
     </head>
-    <style>
-        body{
-            font-family: arial,sans-serif;
+        <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;line-height: 1.6;
+            padding: 0;
+            background-color: #FAF0E6;
         }
-        h1{
-            color:#333;
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .menu{
+        h1, h2 {
+            color: #1a237e;
+        }
+        p {
+            color: #333333;
+        }
+        .menu {
             display: flex;
-            gap:20px;
+            gap: 15px;
             margin: 20px 0;
         }
-        .menu a{
-            padding: 10px 15px;
-            background-color: #4caf50;
+        .menu a {
+            padding: 10px 20px;
+            background-color: #1976d2;
             color: white;
             text-decoration: none;
-            border-radius: 4px
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        .menu a:hover{
-            background-color: #45a049;
+        .menu a:hover {
+            background-color: #0d47a1;
+        }
+        ul {
+            color: #444444;
+            padding-left: 20px;
+        }
+        hr {
+            margin: 30px 0;
+            border: 1px solid #ccc;
         }
     </style>
     <body>
