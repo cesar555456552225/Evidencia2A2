@@ -9,14 +9,19 @@ package com.miproyecto.modelo;
  * @author Personal
  */
 public class Usuario {
-
-    public Usuario(String nombre1, String apellido1, String email1, String password1) {
-    }
     
     private String nombre;
     private String apellido;
     private String email;
     private String password;
+
+    public Usuario(String nombre, String apellido, String email, String password){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.password = password;
+    }
+    
 
     public String getNombre() {
         return nombre;
